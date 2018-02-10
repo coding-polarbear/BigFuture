@@ -4,6 +4,12 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.facebook.FacebookSdk
 import com.facebook.appevents.AppEventsLogger
+import android.content.Intent
+import android.os.Handler
+import android.util.Log
+import android.widget.Toast
+import com.facebook.AccessToken
+
 
 class SplashActivity : AppCompatActivity() {
 
@@ -15,6 +21,14 @@ class SplashActivity : AppCompatActivity() {
         FacebookSdk.sdkInitialize(getApplicationContext())
         AppEventsLogger.activateApp(this)
 
-
+        val handler = Handler()
+        handler.postDelayed({
+            val token : AccessToken? = AccessToken.getCurrentAccessToken()
+            if (token != null) {
+                Toast.makeText(applicationContext, "자동로그인이 되었습니다.", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            } else
+                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+        }, 3000)
     }
 }

@@ -20,14 +20,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitUtil {
 
     var retrofit = Retrofit.Builder()
-            .baseUrl("http://n0rr.kro.kr:7001")
+            .baseUrl("http://purplebeen.kr:2345")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
     val MULTIPART_FORM_DATA = "multipart/form-data"
 
     fun getLoginRetrofit(context: Context): Retrofit {
-        val appPath : String = context.filesDir.absolutePath
         val httpClient = OkHttpClient.Builder()
         httpClient.addInterceptor { chain ->
             val original = chain.request()
@@ -41,7 +40,7 @@ object RetrofitUtil {
 
         val client = httpClient.build()
         return Retrofit.Builder()
-                .baseUrl("http://n0rr.kro.kr:7001")
+                .baseUrl("http://purplebeen.kr:2345")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
