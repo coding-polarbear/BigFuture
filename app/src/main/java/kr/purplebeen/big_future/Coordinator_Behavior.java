@@ -15,7 +15,7 @@ import java.util.jar.Attributes;
  * Created by pc on 2018-02-11.
  */
 
-public class Coordinator_Behavior extends CoordinatorLayout.Behavior<View>{
+public class Coordinator_Behavior extends CoordinatorLayout.Behavior<View> {
     private final static int X = 0;
     private final static int Y = 1;
     private final static int WIDTH = 2;
@@ -99,6 +99,7 @@ public class Coordinator_Behavior extends CoordinatorLayout.Behavior<View>{
             mTarget[Y] += (int) view.getY();
             view = (View) view.getParent();
         }
+
 
     }
 }

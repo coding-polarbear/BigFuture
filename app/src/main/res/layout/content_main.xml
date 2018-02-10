@@ -9,9 +9,88 @@
     tools:context="kr.purplebeen.big_future.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="신난다!! 재미난다 !! 더게임 오브 데스"/>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:paddingTop="30dp"
+       android:paddingRight="5dp"
+       android:paddingLeft="25dp">
 
+
+       <android.support.design.widget.FloatingActionButton
+           android:id="@+id/fab"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="220dp"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="20dp"
+           android:layout_marginBottom="30dp"
+           android:src="@drawable/send"/>
+
+       <RelativeLayout
+           android:id="@+id/mainTitle"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <TextView
+               android:id="@+id/senderName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="20sp"
+               android:text="이건호"
+               android:textColor="@android:color/black"/>
+
+           <ImageView
+               android:id="@+id/arrow"
+               android:layout_width="wrap_content"
+               android:layout_height="30dp"
+               android:src="@drawable/arrow"
+               android:tint="#8e8f96"
+               android:layout_toRightOf="@+id/senderName"/>
+
+           <TextView
+               android:id="@+id/receiverName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="배현빈"
+               android:textSize="20sp"
+               android:textColor="@android:color/black"
+               android:layout_toRightOf="@+id/arrow"/>
+
+           <Spinner
+               android:id="@+id/mainSpinner"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="5dp"
+               >
+           </Spinner>
+
+
+       </RelativeLayout>
+
+       <android.support.design.widget.TextInputLayout
+           android:id="@+id/inputLayout"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/mainTitle"
+           android:hint="하고 싶은 말을 캡슐에 담아주세요!"
+           android:layout_marginRight="20dp"
+           tools:ignore="NotSibling">
+
+           <android.support.design.widget.TextInputEditText
+               android:id="@+id/editContent"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textMultiLine"
+               android:gravity="top|left"
+               android:padding="10dp"
+               />
+
+       </android.support.design.widget.TextInputLayout>
+
+
+
+</RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

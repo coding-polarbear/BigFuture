@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select">
+    <item>행복</item>
+    <item>화남</item>
+    <item>슬픔</item>
+    <item>멋짐</item>
+    <item>웃김</item>
+    <item>기념일</item>
+</string-array>
+</resources>
