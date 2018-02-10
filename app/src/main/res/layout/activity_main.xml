@@ -1,71 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.purplebeen.big_future.MainActivity"
-    android:orientation="vertical">
+    tools:context="kr.purplebeen.big_future.MainActivity">
 
-    <android.support.design.widget.CoordinatorLayout
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.design.widget.AppBarLayout
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
-            >
-            <android.support.design.widget.CollapsingToolbarLayout
-                android:id="@+id/collapsing_toolbar"
+            android:layout_height="280dp"
+            app:title="360日"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="center_horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
-                app:contentScrim="?attr/colorPrimary"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                android:text="남았습니다."
+                android:gravity="center"
+                android:layout_marginTop="70dp"/>
 
-                <TextView
-                    android:id="@+id/mainTv"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:background="@color/colorPrimary"
-                    app:titleTextAppearance="@style/route_title"
-                    />
-
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/mainTb"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:layout_collapseMode="pin"
-                    app:title="365日"
-                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                    >
-                </android.support.v7.widget.Toolbar>
-
-            </android.support.design.widget.CollapsingToolbarLayout>
-
-        </android.support.design.widget.AppBarLayout>
-
-        <android.support.v4.widget.NestedScrollView
-            android:id="@+id/nestedscrollview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            <!--android.support.design.widget.AppBarLayout$ScrollingViewBehavior-->
-            <android.support.v4.view.ViewPager
-                android:id="@+id/mainPager"
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-            </android.support.v4.view.ViewPager>
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
 
-        </android.support.v4.widget.NestedScrollView>
+                <Space
+                    android:id="@+id/circle_collapsed_target"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="5dp"/>
 
-    </android.support.design.widget.CoordinatorLayout>
+            </android.support.v7.widget.Toolbar>
 
 
+        </android.support.design.widget.CollapsingToolbarLayout>
 
-</LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image_view"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/profile"
+        android:layout_marginTop="220dp"
+        android:elevation="8dp"
+        android:layout_gravity="top|center_horizontal"
+        app:border_color="@android:color/black"
+        app:collapsedTarget="@id/circle_collapsed_target"
+        app:layout_behavior="kr.purplebeen.big_future.Coordinator_Behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
