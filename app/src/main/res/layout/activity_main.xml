@@ -6,14 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="kr.purplebeen.big_future.MainActivity"
-    android:weightSum="10"
     android:orientation="vertical">
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:background="@color/colorPrimary">
+        android:layout_height="match_parent">
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -24,8 +21,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:contentScrim="?attr/colorPrimary"
-                app:layout_scrollFlags="scroll|enterAlways">
+                android:background="@color/colorPrimary">
 
+                <TextView
+                    android:id="@+id/mainTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    />
 
                 <android.support.v7.widget.Toolbar
                     android:layout_width="match_parent"
@@ -38,22 +40,23 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <android.support.v4.widget.NestedScrollView
-            android:id="@+id/nestedscrollview"
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:behavior="@String/">
+
+        <!--android.support.design.widget.AppBarLayout$ScrollingViewBehavior-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mainPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            >
+        </android.support.v4.view.ViewPager>
 
-            <!--android.support.design.widget.AppBarLayout$ScrollingViewBehavior-->
-            <android.support.v4.view.ViewPager
-                android:id="@+id/mainPager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-            </android.support.v4.view.ViewPager>
-
-        </android.support.v4.widget.NestedScrollView>
-
-    </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>
