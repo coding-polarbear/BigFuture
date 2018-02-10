@@ -6,6 +6,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
+
+    <style name="route_title" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:color">#fff</item>
+    </style>
+  
 
 </resources>

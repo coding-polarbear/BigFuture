@@ -15,48 +15,57 @@
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
             >
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
                 app:contentScrim="?attr/colorPrimary"
-                android:background="@color/colorPrimary">
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                 <TextView
                     android:id="@+id/mainTv"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
+                    android:background="@color/colorPrimary"
+                    app:titleTextAppearance="@style/route_title"
                     />
 
                 <android.support.v7.widget.Toolbar
+                    android:id="@+id/mainTb"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    app:layout_collapseMode="pin">
-
+                    app:layout_collapseMode="pin"
+                    app:title="365日"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    >
                 </android.support.v7.widget.Toolbar>
 
             </android.support.design.widget.CollapsingToolbarLayout>
 
         </android.support.design.widget.AppBarLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
-
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/nestedscrollview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        app:behavior="@String/">
-
-        <!--android.support.design.widget.AppBarLayout$ScrollingViewBehavior-->
-        <android.support.v4.view.ViewPager
-            android:id="@+id/mainPager"
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedscrollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
-        </android.support.v4.view.ViewPager>
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    </android.support.v4.widget.NestedScrollView>
+            <!--android.support.design.widget.AppBarLayout$ScrollingViewBehavior-->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mainPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </android.support.v4.view.ViewPager>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
 
 </LinearLayout>
