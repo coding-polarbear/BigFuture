@@ -25,6 +25,7 @@ interface CapsuleService {
     @GET("/capsules")
     fun getCapsuleList() : Call<CapsuleListGet>
 
-    @GET("/capsules/{id}")
-    fun getCapsule(@Path("id") id : String) : Call<Success>
+    @POST("/capsules")
+    @Multipart
+    fun sendCapsule(@Part("data") capsule: Capsule) : Call<Success>
 }
