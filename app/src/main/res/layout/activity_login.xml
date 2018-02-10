@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.purplebeen.big_future.SplashActivity"
-    android:background="#009688">
-    
+    android:background="@mipmap/applebackground">
+
     <ImageView
         android:id="@+id/timecapsule"
         android:layout_width="156dp"
@@ -24,7 +22,7 @@
         android:layout_below="@+id/timecapsule"
         android:layout_centerHorizontal="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="Big Future"
+        android:text="Login"
         android:textColor="@android:color/white"
         android:textSize="50dp"
         android:layout_marginTop="70dp"/>
@@ -35,9 +33,23 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:text="미래의 나에게..."
+        android:text="로그인해주세요."
         android:textColor="@android:color/white"
         android:textSize="20dp"
         android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:background="#3074D1"
+        android:text="facebook 으로 로그인"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
 
 </RelativeLayout>

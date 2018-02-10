@@ -14,5 +14,7 @@ class SplashActivity : AppCompatActivity() {
         //Facebook SDK initialize
         FacebookSdk.sdkInitialize(getApplicationContext())
         AppEventsLogger.activateApp(this)
+
+
     }
 }
