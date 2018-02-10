@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Big-Future</string>
+    <string name="facebook_app_id">174254833212734</string>
+    <string name="fb_login_protocol_scheme">fb174254833212734</string>
 </resources>
