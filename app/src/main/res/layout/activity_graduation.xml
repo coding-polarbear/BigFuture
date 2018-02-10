@@ -8,7 +8,7 @@
     android:background="@mipmap/applebackground">
 
     <ImageView
-        android:id="@+id/timeCapsule"
+        android:id="@+id/timecapsule"
         android:layout_width="156dp"
         android:layout_height="156dp"
         android:src="@drawable/timecapsule"
