@@ -2,6 +2,8 @@ package kr.purplebeen.big_future.utills
 
 
 import android.content.Context
+import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.facebook.AccessToken
 
 import java.io.File
@@ -54,4 +56,8 @@ object RetrofitUtil {
     fun createRequestBody(value: String): RequestBody {
         return RequestBody.create(MediaType.parse(MULTIPART_FORM_DATA), value)
     }
+}
+
+fun ImageView.loadUrl(url : String) {
+    Glide.with(context).load(url).into(this)
 }

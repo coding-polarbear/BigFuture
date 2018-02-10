@@ -9,6 +9,8 @@ import com.google.gson.annotations.SerializedName
 class User {
     var _id : String = ""
     val userID : String = ""
+    val userName : String = ""
+    val picture : String = ""
     val schoolName : String = ""
     val graduationDate : String = ""
 
