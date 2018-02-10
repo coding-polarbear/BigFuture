@@ -4,13 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.widget.TextView
 import com.facebook.*
-import com.facebook.login.widget.LoginButton
 import com.facebook.login.LoginResult
 import kotlinx.android.synthetic.main.activity_login.*
-import org.json.JSONException
-import org.json.JSONObject
 import java.util.*
 
 

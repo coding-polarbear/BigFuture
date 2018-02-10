@@ -15,8 +15,6 @@ data class Capsule(val receiverId : String, val receiverName : String, val sende
 
 data class Status(val success : Boolean, val message : String)
 
-data class Token(val token : String)
-
 // Retrofit Bean
 data class Success(val status : Status)
 
