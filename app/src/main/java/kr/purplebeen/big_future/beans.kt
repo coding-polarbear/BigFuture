@@ -6,7 +6,13 @@ import com.google.gson.annotations.SerializedName
  * Created by baehyeonbin on 2018. 2. 10..
  */
 
-data class User(val _id : String, val userID : String, val schoolName : String, val graduationDate : String)
+class User {
+    var _id : String = ""
+    val userID : String = ""
+    val schoolName : String = ""
+    val graduationDate : String = ""
+
+}
 
 data class Capsule(val receiverId : String, val receiverName : String, val senderId : String, val senderName : String, val content : String) {
     var _id : String? = null

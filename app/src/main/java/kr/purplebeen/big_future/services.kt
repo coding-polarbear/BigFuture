@@ -16,9 +16,9 @@ interface UserService {
     @GET("/users")
     fun getUserList() : Call<UserListGet>
 
-    @PUT("/users/{id}")
+    @PUT("/users")
     @Multipart
-    fun updateUser(@Path("id") id : String, user : User)
+    fun updateUser(@Part("data") user : User) : Call<UserGet>
 }
 
 interface CapsuleService {
