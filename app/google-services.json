@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "81874622874",
+    "firebase_url": "https://bigfuture-21d9e.firebaseio.com",
+    "project_id": "bigfuture-21d9e",
+    "storage_bucket": "bigfuture-21d9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81874622874:android:d8c55f3fdcdbde46",
+        "android_client_info": {
+          "package_name": "kr.purplebeen.big_future"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81874622874-eluafk6s19cjikqfj5c8usueb5u1a318.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.purplebeen.big_future",
+            "certificate_hash": "6841447df97929d85d5013f1052bd16dc2fdef0d"
+          }
+        },
+        {
+          "client_id": "81874622874-crgffgeasgtnvis74abqftv265hr62rg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPfm6SYyXmEialxEUejbH3-26HSV59S6U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81874622874-crgffgeasgtnvis74abqftv265hr62rg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

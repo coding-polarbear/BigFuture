@@ -35,6 +35,10 @@ dependencies {
     //Android Design Support Library
     implementation 'com.android.support:design:26.1.0'
 
+    //Firebase Setting
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'
+
     //Facebook SDK
     implementation 'com.facebook.android:facebook-android-sdk:4.30.0'
 
@@ -42,3 +46,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+apply plugin: 'com.google.gms.google-services'

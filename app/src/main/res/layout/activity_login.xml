@@ -38,10 +38,14 @@
         android:textSize="20dp"
         android:layout_marginTop="15dp"/>
 
-    <Button
-        android:id="@+id/loginbutton"
-        android:layout_width="320dp"
-        android:layout_height="65dp"
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginLeft="40dp"
         android:background="#3074D1"
         android:text="facebook 으로 로그인"
         android:textAllCaps="false"

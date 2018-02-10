@@ -46,6 +46,9 @@
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".GraduationActivity"></activity>
+
+        <service android:name=".firebaseServices.MyFirebaseMessagingService" />
+        <service android:name=".firebaseServices.MyFirebaseInstanceService" />
     </application>
 
 </manifest>
