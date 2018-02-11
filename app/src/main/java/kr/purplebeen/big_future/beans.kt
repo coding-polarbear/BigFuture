@@ -36,7 +36,7 @@ data class UserListGet(val status : Status, @SerializedName("users")val userList
 
 data class UserGet(val status : Status, val user : User)
 
-data class CapsuleListGet(val status : Status, @SerializedName("capsules")val capsuleList : List<Capsule>)
+data class CapsuleListGet(val status : Status, @SerializedName("capsules")val capsuleList : ArrayList<Capsule>)
 
 data class CapsuleGet(val status : Status, val capsule : Capsule)
 

@@ -9,6 +9,8 @@ import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import com.facebook.AccessToken
+import com.google.firebase.iid.FirebaseInstanceId
+import com.google.firebase.messaging.FirebaseMessaging
 
 
 class SplashActivity : AppCompatActivity() {
@@ -20,6 +22,9 @@ class SplashActivity : AppCompatActivity() {
         //Facebook SDK initialize
         FacebookSdk.sdkInitialize(getApplicationContext())
         AppEventsLogger.activateApp(this)
+
+        FirebaseMessaging.getInstance().subscribeToTopic("test")
+        FirebaseInstanceId.getInstance().getToken();
 
         val handler = Handler()
         handler.postDelayed({

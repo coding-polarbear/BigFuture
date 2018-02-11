@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
     fun setListners() {
         fab.setOnClickListener{
             if (friendName != null && tag != null) {
-                var capsule: Capsule = Capsule(me.userID, me.userName, friendID!!,  friendName!!, editContent.text.toString(), "#" + tag)
+                var capsule: Capsule = Capsule(me.userID, me.userName, friendID!!,  friendName!!, editContent.text.toString(), tag)
                 var capsuleService : CapsuleService = RetrofitUtil.getLoginRetrofit(applicationContext).create(CapsuleService::class.java)
                 var call : Call<Success> = capsuleService.sendCapsule(capsule)
                 call.enqueue(object : Callback<Success> {

@@ -23,7 +23,7 @@ interface UserService {
 
 interface CapsuleService {
     @GET("/capsules")
-    fun getCapsuleList() : Call<CapsuleListGet>
+    fun getCapsuleList(@Query("tag") tag : String) : Call<CapsuleListGet>
 
     @POST("/capsules")
     @Multipart

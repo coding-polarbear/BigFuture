@@ -24,19 +24,19 @@ class GraduatedAdapter (context: Context, data_items: ArrayList<Capsule>, data_l
     }
 
     override fun getView(i: Int, convertview: View?, viewGroup: ViewGroup): View {
-        var view:View?=null
+        var graduatedView:View?=null
 
-        view =  inflater?.inflate(R.layout.friendsitem,viewGroup,false)
+        graduatedView =  inflater?.inflate(R.layout.graduated_item,viewGroup,false)
 
         var sendname : TextView
         var receiverName : TextView
         var context : TextView
         var date : TextView
 
-        date = view.findViewById<TextView>(R.id.graduatedData) as TextView
-        receiverName = view?.findViewById<TextView>(R.id.graduatedContext) as TextView
-        sendname = view?.findViewById<TextView>(R.id.senderName) as TextView
-        context = view?.findViewById<TextView>(R.id.receiverName) as TextView
+        date = graduatedView!!.findViewById<TextView>(R.id.graduatedData) as TextView
+        receiverName = graduatedView.findViewById<TextView>(R.id.graduatedContext) as TextView
+        sendname = graduatedView.findViewById<TextView>(R.id.senderName) as TextView
+        context = graduatedView.findViewById<TextView>(R.id.receiverName) as TextView
 
 
 
@@ -47,7 +47,7 @@ class GraduatedAdapter (context: Context, data_items: ArrayList<Capsule>, data_l
         context.text = capsule.content
         date.text = capsule.createdDate
 
-        return view!!
+        return graduatedView
     }
 
     override fun getCount(): Int {
