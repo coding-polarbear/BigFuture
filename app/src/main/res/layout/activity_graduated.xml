@@ -48,6 +48,16 @@
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/GraduatedTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/colorPrimary"
+            app:tabBackground="@drawable/select_color"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#FFF">
+        </android.support.design.widget.TabLayout>
 
     </android.support.design.widget.AppBarLayout>
 

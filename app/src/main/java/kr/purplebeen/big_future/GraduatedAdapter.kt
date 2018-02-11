@@ -33,10 +33,12 @@ class GraduatedAdapter (context: Context, data_items: ArrayList<Capsule>, data_l
         var context : TextView
         var date : TextView
 
-        date = view?.findViewById<TextView>(R.id.graduatedData) as TextView
+        date = view.findViewById<TextView>(R.id.graduatedData) as TextView
         receiverName = view?.findViewById<TextView>(R.id.graduatedContext) as TextView
         sendname = view?.findViewById<TextView>(R.id.senderName) as TextView
         context = view?.findViewById<TextView>(R.id.receiverName) as TextView
+
+
 
         var capsule : Capsule = getItem(i)!!
 
