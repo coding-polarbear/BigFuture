@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/graduatedContext"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:text="딸기가 좋아 딸기가 좋아 좋아 좋아 좋아 좋아 좋아 좋아!!"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/graduatedData"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="2018-02-11"
+            android:gravity="center"/>
+        <RelativeLayout
+        android:id="@+id/mainTitle"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/senderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="이건호"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/arrow"
+            android:tint="@color/colorPrimary"
+            android:layout_toRightOf="@+id/senderName"/>
+
+        <TextView
+            android:id="@+id/receiverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배현빈"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@+id/arrow"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
@@ -37,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".Graduated"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -48,12 +48,17 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".GraduationActivity"/>
+        <activity android:name=".MainActivity"/>
 
         <service android:name=".firebaseServices.MyFirebaseMessagingService"/>
         <service android:name=".firebaseServices.MyFirebaseInstanceService"/>
 
         <activity android:name=".activity_friendslist">
+        </activity>
+        <activity
+            android:name=".GraduationActivity"
+            android:label="@string/title_activity_graduated"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

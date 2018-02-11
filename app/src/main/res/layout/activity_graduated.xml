@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kr.purplebeen.big_future.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <TextView
+                android:id="@+id/receiverText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="축 졸업"
+                android:textSize="80sp"
+                android:textColor="#62ffeb"
+                android:gravity="center"
+                android:layout_marginBottom="80dp"/>
+
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <Space
+                    android:id="@+id/circle_collapsed_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_graduated"/>
+
+    <TextView
+        android:id="@+id/graduatedname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:elevation="8dp"
+        android:text="배현빈님의 졸업을 축하드립니다."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/white"
+        android:layout_gravity="top|center_horizontal"
+        app:border_color="@android:color/black"
+        app:collapsedTarget="@id/circle_collapsed_target"
+        app:layout_behavior="kr.purplebeen.big_future.Coordinator_Behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
