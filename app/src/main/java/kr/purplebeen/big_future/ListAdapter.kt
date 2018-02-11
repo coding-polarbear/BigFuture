@@ -1,18 +1,22 @@
 package kr.purplebeen.big_future
 
 import android.content.Context
+import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import kotlinx.android.synthetic.main.friendsitem.view.*
+import kr.purplebeen.big_future.utills.loadUrl
 
 /**
  * Created by pc on 2018-02-11.
  */
-class ListAdapter(context: Context, data_items: ArrayList<User>, data_layout: Int) : BaseAdapter() {
-    private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var items = ArrayList<User>()
+class ListAdapter(context: Context, data_items: ArrayList<GeneralUser>, data_layout: Int) : BaseAdapter() {
+    private val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    private var items = ArrayList<GeneralUser>()
     private var layout : Int = 0
 
     init {
@@ -20,27 +24,26 @@ class ListAdapter(context: Context, data_items: ArrayList<User>, data_layout: In
         layout = data_layout
     }
 
-    override fun getView(i: Int, convertview: View?, viewGroup: ViewGroup): View {
-        var view:View?=null
+    override fun getView(i: Int, convertview: View?, parent: ViewGroup): View {
+        var listView:View?=null
 
-        view =  inflater?.inflate(R.layout.friendsitem,viewGroup,false)
+        listView =  inflater.inflate(R.layout.friendsitem, parent!!, false)
 
-        var name : TextView
+        var user : GeneralUser = items[i]
 
-        name = view?.findViewById<TextView>(R.id.friendsname) as TextView
+        listView.friendsname.text = user.name
+        Log.d("userTest", user.name)
+        listView.circle_image_view.loadUrl(user.picture)
 
-        var user : User = getItem(i)!!
 
-        name.text = user.userName
-
-        return view!!
+        return listView!!
     }
 
     override fun getCount(): Int {
         return items!!.size
     }
 
-    override fun getItem(i: Int): User? {
+    override fun getItem(i: Int): GeneralUser? {
         return items?.get(i)
     }
 

@@ -13,10 +13,16 @@ class User {
     val picture : String = ""
     val schoolName : String = ""
     var graduationDate : String = ""
-
 }
 
-data class Capsule(val receiverId : String, val receiverName : String, val senderId : String, val senderName : String, val content : String, val tag : String) {
+class GeneralUser {
+    var _id : String = ""
+    val id : String = ""
+    val name : String = ""
+    val picture : String = ""
+}
+
+data class Capsule(val receiverID : String, val receiverName : String, val senderID : String, val senderName : String, val content : String, val tag : String) {
     var _id : String? = null
     var createdDate : String? = null
 }
@@ -26,7 +32,7 @@ data class Status(val success : Boolean, val message : String)
 // Retrofit Bean
 data class Success(val status : Status)
 
-data class UserListGet(val status : Status, @SerializedName("users")val userList : List<User>)
+data class UserListGet(val status : Status, @SerializedName("users")val userList : ArrayList<GeneralUser>)
 
 data class UserGet(val status : Status, val user : User)
 
