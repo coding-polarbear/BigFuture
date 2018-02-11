@@ -48,7 +48,8 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <service android:name=".firebaseServices.MyFirebaseMessagingService"/>
         <service android:name=".firebaseServices.MyFirebaseInstanceService"/>
