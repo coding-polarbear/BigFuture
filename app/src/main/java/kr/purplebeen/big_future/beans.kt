@@ -12,7 +12,7 @@ class User {
     val userName : String = ""
     val picture : String = ""
     val schoolName : String = ""
-    val graduationDate : String = ""
+    var graduationDate : String = ""
 
 }
 

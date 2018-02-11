@@ -13,11 +13,15 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kr.purplebeen.big_future.utills.loadUrl
 import ninja.sakib.pultusorm.core.PultusORM
+import java.text.SimpleDateFormat
+import java.util.*
+import java.util.concurrent.TimeUnit
 
 
 class MainActivity : AppCompatActivity() {
     var tag : String = ""
     var friend : User? = null
+    lateinit var me : User
     lateinit var pultusORM : PultusORM
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,17 +40,34 @@ class MainActivity : AppCompatActivity() {
                 tag = select
             }
         }
+
+        setORM()
+        getDDay()
+        setListners()
+    }
+
+    fun getDifferenceDays(d1: Date, d2: Date): Long {
+        val diff = d2.time - d1.time
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)
     }
 
     fun setORM() {
         val appPath : String = applicationContext.filesDir.absolutePath
         pultusORM = PultusORM("bigfuture.db", appPath)
+        var userList : List<Any> = pultusORM.find(User())
+        me = userList[userList.size - 1] as User
+    }
+
+    fun getDDay() {
+        var simpleDataFormat : SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
+        var date1 : Date = simpleDataFormat.parse(me.graduationDate)
+        var date2 : Date = Date(System.currentTimeMillis())
+        var dDay : Long = getDifferenceDays(date1, date2)
+        toolbar_layout.title = "D " + dDay.toString() + "日"
     }
 
     fun setListners() {
         fab.setOnClickListener{
-            var userList : List<Any> = pultusORM.find(User())
-            var me : User = userList[userList.size - 1] as User
             if (friend != null && tag != null) {
                 var capsule: Capsule = Capsule(me.userID, me.userName, friend!!.userID, friend!!.userID, editContent.text.toString(), tag)
             } else {

@@ -43,7 +43,8 @@ class GraduationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
         nextButton.setOnClickListener {
             val userService : UserService = RetrofitUtil.getLoginRetrofit(applicationContext).create(UserService::class.java)
             val userList : List<Any> = pultusORM.find(User())
-            val user : User = userList[userList.size - 1] as User
+            var user : User = userList[userList.size - 1] as User
+            user.graduationDate = strDate!!
             val call : Call<UserGet> = userService.updateUser(user)
             if(strDate != null) {
                 call.enqueue(object : Callback<UserGet> {
@@ -52,6 +53,7 @@ class GraduationActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
                         if (response.body()!!.status.success) {
                             pultusORM.delete(User::class.java)
                             pultusORM.save(response.body()!!.user)
+                            Log.d("graduateDate", response.body()!!.user.graduationDate)
                             Toast.makeText(applicationContext, "졸업 예정일이 성공적으로 설정되었습니다!", Toast.LENGTH_LONG).show()
                             startActivity(Intent(this@GraduationActivity, MainActivity::class.java))
                         } else {
