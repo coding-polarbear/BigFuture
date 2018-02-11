@@ -13,6 +13,7 @@ import android.widget.TextView
 
 class GraduatedAdapter (context: Context, data_items: ArrayList<Capsule>, data_layout: Int) : BaseAdapter() {
 
+
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var items = ArrayList<Capsule>()
     private var layout : Int = 0
@@ -54,8 +55,9 @@ class GraduatedAdapter (context: Context, data_items: ArrayList<Capsule>, data_l
     override fun getItem(i: Int): Capsule? {
         return items?.get(i)
 
-        fun getItemId(i: Int): Long {
-            return i.toLong()
-        }
+    }
+
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
     }
 }
