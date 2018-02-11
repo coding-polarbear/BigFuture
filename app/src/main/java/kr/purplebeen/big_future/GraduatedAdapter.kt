@@ -43,8 +43,8 @@ class GraduatedAdapter (context: Context, data_items: ArrayList<Capsule>, data_l
         var capsule : Capsule = getItem(i)!!
 
         sendname.text = capsule.senderName
-        receiverName.text = capsule.receiverName
-        context.text = capsule.content
+        receiverName.text = capsule.content
+        context.text = capsule.receiverName
         date.text = capsule.createdDate
 
         return graduatedView
