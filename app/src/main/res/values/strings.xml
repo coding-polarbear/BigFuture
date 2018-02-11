@@ -4,4 +4,5 @@
     <string name="fb_login_protocol_scheme">fb174254833212734</string>
     <string name="simple_view_behavior">com.zoonref.viewbehavior.SimpleViewBehavior</string>
     <string name="animation_view_behavior">com.zoonref.viewbehavior.AnimationViewBehavior</string>
+    <string name="title_activity_graduated">Graduated</string>
 </resources>
