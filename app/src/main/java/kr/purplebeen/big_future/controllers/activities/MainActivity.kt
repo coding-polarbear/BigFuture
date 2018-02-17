@@ -1,4 +1,4 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -6,15 +6,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
-import android.widget.AdapterView.OnItemSelectedListener
 import kotlinx.android.synthetic.main.content_main.*
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kr.purplebeen.big_future.*
 import kr.purplebeen.big_future.utills.RetrofitUtil
 import kr.purplebeen.big_future.utills.loadUrl
 import ninja.sakib.pultusorm.core.PultusORM
-import ninja.sakib.pultusorm.core.isAndroidPlatform
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -76,7 +75,7 @@ class MainActivity : AppCompatActivity() {
     fun setListners() {
         fab.setOnClickListener{
             if (friendName != null && tag != null) {
-                var capsule: Capsule = Capsule(me.userID, me.userName, friendID!!,  friendName!!, editContent.text.toString(), tag)
+                var capsule: Capsule = Capsule(me.userID, me.userName, friendID!!, friendName!!, editContent.text.toString(), tag)
                 var capsuleService : CapsuleService = RetrofitUtil.getLoginRetrofit(applicationContext).create(CapsuleService::class.java)
                 var call : Call<Success> = capsuleService.sendCapsule(capsule)
                 call.enqueue(object : Callback<Success> {
@@ -101,7 +100,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         circle_image_view.setOnClickListener {
-            startActivityForResult(Intent(this@MainActivity, activity_friendslist::class.java), 3000)
+            startActivityForResult(Intent(this@MainActivity, FriendListActivity::class.java), 3000)
         }
     }
 

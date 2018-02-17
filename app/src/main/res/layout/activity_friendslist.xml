@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.purplebeen.big_future.activity_friendslist">
+    tools:context="kr.purplebeen.big_future.controllers.activities.FriendListActivity">
 
     <ListView
         android:id="@+id/friendslist"

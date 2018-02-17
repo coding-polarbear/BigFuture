@@ -1,21 +1,19 @@
-package kr.purplebeen.big_future;
+package kr.purplebeen.big_future.controllers.behaviors;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.view.View;
 
-import java.util.jar.Attributes;
+import kr.purplebeen.big_future.R;
 
 /**
  * Created by pc on 2018-02-11.
  */
 
-public class Coordinator_Behavior extends CoordinatorLayout.Behavior<View> {
+public class CoordinatorBehavior extends CoordinatorLayout.Behavior<View> {
     private final static int X = 0;
     private final static int Y = 1;
     private final static int WIDTH = 2;
@@ -27,10 +25,10 @@ public class Coordinator_Behavior extends CoordinatorLayout.Behavior<View> {
 
     private int[] mTarget;
 
-    public Coordinator_Behavior() {
+    public CoordinatorBehavior() {
     }
 
-    public Coordinator_Behavior(Context context, AttributeSet attrs) {
+    public CoordinatorBehavior(Context context, AttributeSet attrs) {
 
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CollapsingImageBehavior);

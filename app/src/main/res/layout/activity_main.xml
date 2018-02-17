@@ -6,7 +6,7 @@
     android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.purplebeen.big_future.MainActivity">
+    tools:context="kr.purplebeen.big_future.controllers.activities.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -72,6 +72,6 @@
         android:layout_gravity="top|center_horizontal"
         app:border_color="@android:color/black"
         app:collapsedTarget="@id/circle_collapsed_target"
-        app:layout_behavior="kr.purplebeen.big_future.Coordinator_Behavior"/>
+        app:layout_behavior="kr.purplebeen.big_future.controllers.behaviors.CoordinatorBehavior"/>
 
 </android.support.design.widget.CoordinatorLayout>

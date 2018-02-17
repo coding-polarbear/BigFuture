@@ -1,4 +1,4 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,11 +6,11 @@ import com.facebook.FacebookSdk
 import com.facebook.appevents.AppEventsLogger
 import android.content.Intent
 import android.os.Handler
-import android.util.Log
 import android.widget.Toast
 import com.facebook.AccessToken
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.firebase.messaging.FirebaseMessaging
+import kr.purplebeen.big_future.R
 
 
 class SplashActivity : AppCompatActivity() {

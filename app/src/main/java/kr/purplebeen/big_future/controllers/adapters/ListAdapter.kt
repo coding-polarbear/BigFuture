@@ -1,14 +1,14 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.adapters
 
 import android.content.Context
-import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.TextView
 import kotlinx.android.synthetic.main.friendsitem.view.*
+import kr.purplebeen.big_future.GeneralUser
+import kr.purplebeen.big_future.R
 import kr.purplebeen.big_future.utills.loadUrl
 
 /**

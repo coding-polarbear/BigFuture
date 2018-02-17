@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.purplebeen.big_future.GraduationActivity"
+    tools:context="kr.purplebeen.big_future.controllers.activities.GraduationActivity"
     android:background="@mipmap/applebackground">
 
     <ImageView

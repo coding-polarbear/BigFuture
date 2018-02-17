@@ -1,4 +1,4 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import kr.purplebeen.big_future.Capsule
+import kr.purplebeen.big_future.R
 
 /**
  * Created by pc on 2018-02-11.

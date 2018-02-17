@@ -1,8 +1,9 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.adapters
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
+import kr.purplebeen.big_future.controllers.fragments.PagerFragment
 
 /**
  * Created by pc on 2018-02-11.

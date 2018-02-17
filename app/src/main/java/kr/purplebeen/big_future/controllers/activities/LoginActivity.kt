@@ -1,4 +1,4 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,9 @@ import android.widget.Toast
 import com.facebook.*
 import com.facebook.login.LoginResult
 import kotlinx.android.synthetic.main.activity_login.*
+import kr.purplebeen.big_future.R
+import kr.purplebeen.big_future.SignService
+import kr.purplebeen.big_future.UserSignIn
 import kr.purplebeen.big_future.utills.RetrofitUtil
 import ninja.sakib.pultusorm.core.PultusORM
 import retrofit2.Call

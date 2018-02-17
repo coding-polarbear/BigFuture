@@ -1,14 +1,15 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.activities
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.TabLayout
 import android.support.v7.app.AppCompatActivity
 
 import kotlinx.android.synthetic.main.activity_graduated.*
 import kotlinx.android.synthetic.main.content_graduated.*
+import kr.purplebeen.big_future.controllers.adapters.PagerAdapter
+import kr.purplebeen.big_future.R
 
-class Graduated : AppCompatActivity() {
+class TimeCapsuleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +23,7 @@ class Graduated : AppCompatActivity() {
         GraduatedTab.addTab(GraduatedTab.newTab().setText("기념일"))
         GraduatedTab.tabGravity = TabLayout.GRAVITY_FILL
 
-        val pageradapter = PagerAdapter(supportFragmentManager,GraduatedTab.tabCount)
+        val pageradapter = PagerAdapter(supportFragmentManager, GraduatedTab.tabCount)
         graduatedpager.adapter = pageradapter
 
         graduatedpager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(GraduatedTab))

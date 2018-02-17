@@ -8,7 +8,7 @@ import android.media.RingtoneManager
 import android.support.v4.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import kr.purplebeen.big_future.MainActivity
+import kr.purplebeen.big_future.controllers.activities.MainActivity
 import kr.purplebeen.big_future.R
 
 /**

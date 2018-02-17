@@ -1,4 +1,4 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -6,12 +6,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_friendslist.*
+import kr.purplebeen.big_future.*
 import kr.purplebeen.big_future.utills.RetrofitUtil
+import kr.purplebeen.big_future.controllers.adapters.ListAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class activity_friendslist : AppCompatActivity() {
+class FriendListActivity : AppCompatActivity() {
     lateinit var userList : ArrayList<GeneralUser>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

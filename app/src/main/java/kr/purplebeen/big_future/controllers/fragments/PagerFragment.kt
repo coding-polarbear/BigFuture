@@ -1,4 +1,4 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,7 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_pager.view.*
+import kr.purplebeen.big_future.Capsule
+import kr.purplebeen.big_future.CapsuleListGet
+import kr.purplebeen.big_future.CapsuleService
+import kr.purplebeen.big_future.R
 import kr.purplebeen.big_future.utills.RetrofitUtil
+import kr.purplebeen.big_future.controllers.adapters.GraduatedAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

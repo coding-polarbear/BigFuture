@@ -1,4 +1,4 @@
-package kr.purplebeen.big_future
+package kr.purplebeen.big_future.controllers.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 import kotlinx.android.synthetic.main.activity_graduation.*
+import kr.purplebeen.big_future.*
 import kr.purplebeen.big_future.utills.RetrofitUtil
 import ninja.sakib.pultusorm.core.PultusORM
 import retrofit2.Call
